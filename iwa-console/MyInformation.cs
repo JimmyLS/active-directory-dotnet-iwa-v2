@@ -58,7 +58,7 @@ namespace iwa_console
         /// URLs of the protected Web APIs to call (here Microsoft Graph endpoints)
         /// </summary>
         private string WebApiUrlMe { get { return $"{MicrosoftGraphBaseEndpoint}/v1.0/me"; } }
-        private string WebApiUrlMyManager { get { return $"{MicrosoftGraphBaseEndpoint}/v1.0/me/manager"; } }
+        //private string WebApiUrlMyManager { get { return $"{MicrosoftGraphBaseEndpoint}/v1.0/me/manager"; } }
 
         /// <summary>
         /// Calls the Web API and displays its information
@@ -73,7 +73,7 @@ namespace iwa_console
 
                 string accessToken = authenticationResult.AccessToken;
                 await CallWebApiAndDisplayResultAsync(WebApiUrlMe, accessToken, "Me");
-                await CallWebApiAndDisplayResultAsync(WebApiUrlMyManager, accessToken, "My manager");
+               // await CallWebApiAndDisplayResultAsync(WebApiUrlMyManager, accessToken, "My manager");
             }
         }
 
